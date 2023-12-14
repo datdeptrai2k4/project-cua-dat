@@ -1,0 +1,37 @@
+body{
+    font-family: sans-serif;
+}
+h1 {
+    line-height: 40px;
+}
+p{
+    font-size: 24px;
+}
+#frontend{
+    text-decoration-line: underline;
+    color: #1d6e09;
+
+}
+
+.highlight{
+    font-weight: bold;
+    font-style: italic;
+}
+
+h2{
+    text-transform:uppercase
+}
+
+a{
+    text-decoration: none;
+    color: coral;
+    
+}
+a:hover {
+    background-color: yellow;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+

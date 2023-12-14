@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 38px 45px;
+   
+   
+}
+
+ul{
+    list-style: none;
+   
+}
+
+.logo{
+font-size: 22px;
+font-weight: 700;
+line-height: 29px;
+letter-spacing: 0em;
+text-align: left;
+color: #14203E3D;
+
+
+
+}
+
+.menu{
+    display: flex;
+}
+
+.menu-item{
+   margin-right: 56px;
+    color: #14203E;
+
+    
+}
+
+.login{
+    margin-right: 15px;
+    padding: 13px 30px;
+    background-color: #F6F0E8;
+    border-radius: 10px;
+    border: none;
+}
+
+.start{
+    margin-right: 15px;
+    padding: 13px 30px;
+    background-color: #14203E;
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.hero{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #FFFCF8;
+    padding: 129px ;
+    
+}
+
+.hero-content{
+    max-width: 600px;
+    
+}
+
+.hero-title{
+    margin-bottom: 30px;
+    font-weight: 700px;
+    line-height: 72px;
+    font-size: 66px;
+}
+
+.hero-desc{
+    margin-bottom: 40px;
+}
+
+.hero-button{
+    background-color: #14203E;
+    padding: 25px 40px;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+.arcticles,.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+
+}
+
+.title-line{
+    width: 200px;
+    height: 2px;
+    background-color: #14203E;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.arcticles-list{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 60px;
+    
+    
+}
+
+.arcticles-item{
+    width: 20%;
+   margin-right: 30px;
+   margin-bottom: 20px;
+   
+}
+
+.arcticles-thumb{
+    width: 100%;
+}
+
+.arcticles-link{
+    color: #14203E;
+    font-weight: bold;
+   
+}
+

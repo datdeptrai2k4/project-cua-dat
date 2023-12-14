@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 120px;
+            height: 80px;
+            background-color: aquamarine;
+            text-align: center;
+            line-height: 80px;
+            position: fixed;
+        }
+
+        .box2{
+    width: 60px;
+    height: 40px;
+    background-color:crimson;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+
+}
+
+        .top-left{
+            top: 0px;
+            left: 0px;
+        }
+        .top-right{
+            top: 0px;
+            right: 0px;
+        }
+        .bottom-left{
+            bottom: 0px;
+            left: 0px;
+        }
+        .bottom-right{
+            bottom: 0px;
+            right: 0px;
+        }
+
+        .top-center{
+            top: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bottom-center{
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .left-center{
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .right-center{
+            right: 0px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .center-center{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .CBL{
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <div class="row1">
+        <div class=" box top-left">top-left</div>
+        <div class=" box top-center">top-center</div>
+        <div class=" box top-right">top-right</div>
+    </div>
+    <div class="row2">
+        <div class=" box left-center">left-center</div>
+        <div class=" box center-center">center-center</div>
+        <div class=" box right-center">right-center</div>
+        <div class=" box2 CTL">CTL</div>
+        <div class=" box2 CTR">CTR</div>
+        <div class=" box2 CBL">CBL</div>
+        <div class=" box2 CBR">CBR</div>
+    </div>
+    <div class="row3">
+        <div class=" box bottom-left">bottom-left</div>
+        <div class=" box bottom-center">bottom-center</div>
+        <div class=" box bottom-right">bottom-right</div>
+    </div>
+</body>
+</html>

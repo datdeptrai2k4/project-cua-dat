@@ -1,0 +1,107 @@
+img{
+width: 164px;
+height: 109.32px;
+margin-left: 76.5px;
+background: url(.png);
+}
+
+
+th{
+    background: #415466;
+    color: #DEE2E6;
+    font-family: 'Roboto'; 
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+   
+}
+#infor{
+    color:  #415466;
+}
+
+
+
+
+table {
+    width: 1536px;
+    margin: 150px auto;
+    border-collapse: collapse;
+
+}
+
+.active{
+font-family: Arial;
+font-size: 16px;
+font-weight: 400;
+line-height: 32px;
+text-align: center;
+width:  91.21px;
+height: 32px;
+border-radius: 30px;
+border: 1px;
+background: linear-gradient(0deg, #299F86, #299F86),
+linear-gradient(0deg, #37B99B, #37B99B);
+color: #FFFFFF;
+margin-left: 16px;
+
+}
+
+.unactive{
+    Width:139.04px;
+    height: 32px;
+padding: 6.8px, 23.24px, 7.2px, 21.8px;
+border-radius: 30px;
+border: 1px;
+background: linear-gradient(0deg, #117A8B, #117A8B),
+linear-gradient(0deg, #2CA2B6, #2CA2B6);font-family: Arial;
+font-size: 16px;
+font-weight: 400;
+line-height: 18px;
+letter-spacing: 0em;
+text-align: center;
+color: #FFFFFF;
+
+
+
+}
+
+#sapxep{
+    width: 65px;
+    height: 29.6px;
+
+}
+.pen{
+    background-color: #37B99B;
+    border: solid #299F86;
+    float: left;
+    padding: 6.8px 8.8px;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+
+.trash{
+    background-color: #D83347;
+    border: solid #BD2130;
+    float: left;
+    padding: 6.8px 8.8px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    
+}
+.arrow{
+    background-color: #6D757D;
+    border: solid #4E555B;
+    float: left;
+    padding: 6.8px 8.8px;
+    border-radius: 50%;
+    color: #FFFFFF;
+
+}
+#body{
+    background: linear-gradient(0deg, #DEE2E6, #DEE2E6),
+linear-gradient(0deg, #F2F2F2, #F2F2F2);
+
+}
+#body:nth-child(even){
+    background-color: #FFFFFF;
+    }

@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eef3f9;
+  font-family: 'Mulish', sans-serif;
+  color: #151749;
+}
+
+.form {
+    width: 625px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 10px 86px -20px #C8D5F1;
+}
+
+.form-header {
+    text-align: center;
+    padding: 101px 20px 70px 20px;
+    background-color: #20225E;
+    color: white;
+    position: relative;
+}
+
+.btn-close {
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #2F316E;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.form-body {
+    padding: 65px 117px 70px 117px;
+}
+
+.form-group {
+    margin-bottom: 40px;
+}
+
+.form-group label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #D3D5F1;
+    padding: 13px 0;
+    font-size: 18px;
+    color: #151749;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+}
+
+.form-submit {
+    text-align: center;
+}
+
+.btn-submit {
+    color: white;
+    padding: 27px 92px;
+    border-radius: 38.5px;
+    background: #20225E;
+    box-shadow: 0px 20px 20px -16px rgba(2, 6, 127, 0.35);
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 15px;
+    cursor: pointer;
+}
+

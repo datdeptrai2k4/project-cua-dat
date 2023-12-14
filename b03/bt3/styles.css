@@ -1,0 +1,81 @@
+.box{
+    width: 120px;
+    height: 80px;
+    background-color: aquamarine;
+    text-align: center;
+    line-height: 80px;
+    position: fixed;
+}
+
+.box2{
+    width: 60px;
+    height: 40px;
+    background-color:crimson;
+    text-align: center;
+    line-height: 40px;
+    position: fixed;
+
+}
+
+.top-left{
+    top: 0px;
+    left: 0px;
+}
+.top-right{
+    top: 0px;
+    right: 0px;
+}
+.bottom-left{
+    bottom: 0px;
+    left: 0px;
+}
+.bottom-right{
+    bottom: 0px;
+    right: 0px;
+}
+
+.top-center{
+    top: 0px;
+    left: calc(50% - 60px);
+}
+
+.bottom-center{
+    bottom: 0px;
+    left: calc(50% - 60px);
+}
+
+.left-center{
+    left: 0px;
+    bottom:calc(50% - 40px);
+}
+
+.right-center{
+    right: 0px;
+    bottom:calc(50% - 40px);
+
+}
+
+.center-center{
+    
+    left: calc(50% - 60px);
+    bottom:calc(50% - 40px);
+}
+
+.CTL{
+    left: calc(50% - 120px);
+    top:calc(50% - 80px);
+}
+
+.CTR{
+    right:calc(50% - 120px);
+    top:calc(50% - 80px);
+}
+
+.CBL{
+    left: calc(50% - 120px);
+    top:calc(50% + 40px);
+}
+.CBR{
+    right: calc(50% - 120px);
+    top:calc(50% + 40px);
+}

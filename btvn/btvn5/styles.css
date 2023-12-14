@@ -24,7 +24,7 @@ width: 100%;
 .slide1 {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
-  padding: 65px 159px 245px 65px;
+  padding: 40px 40px 95px 40px;
   background: linear-gradient(135deg, #BA91E9 0%, #6D58CE 100%);
   margin-left: 40px;
 }
@@ -42,6 +42,7 @@ width: 100%;
     color: white;
     max-width: 241px;
     margin-bottom: 40px;
+    padding: 65px  159px  245px 65px;
   }
 
 

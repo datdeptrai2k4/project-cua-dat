@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table{
+    background-color: #252B42;
+    margin: 269px 313px;
+}
+
+.menu{
+    background-color: #1A2036;
+}
+
+.menu-item{
+    color: white;
+}

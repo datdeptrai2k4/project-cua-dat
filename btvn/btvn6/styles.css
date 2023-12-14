@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+body{
+    background-color: #D8DAE2;
+}
+
+.biggest-collection{
+    position: relative;
+    margin: 216px 18px ;
+}
+    
+
+.collection{
+    background-color: #EFF0F1;
+    box-shadow: 0px 76px 27px 0px #061B521A;
+    border-radius: 26px;
+    padding: 62px;
+    padding-bottom: 0px;
+    position: relative;
+    z-index: 10;
+    
+
+}
+
+
+.title{
+    font-family: 'Merriweather', serif;
+    padding-bottom: 24px;
+}
+
+.menu{
+    padding-bottom: 56px;
+    display: flex;
+
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+   
+}
+
+.menu-item{
+   margin-right: 10px;
+    color: #0E0E38;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 10px 10px;
+    font-weight: 500px;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+
+.infor{
+    
+    background-color: #FFFFFF;
+    border-radius: 38px;
+    display: flex;
+   
+
+      
+}
+
+
+.list-item{
+    flex-direction: column;
+    padding:24px 24px 0px 24px ;
+    display: flex;
+
+}
+
+.thumb-small{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.list-hero{
+    display: flex;
+    padding-bottom: 62px;
+    justify-content: space-between;
+}
+
+.botter{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    
+}
+
+.botter-title{
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 36px;
+    
+}
+
+.icon{
+    font-weight: 500px;
+    font-family: "Poppins";
+   
+}
+
+.radius{
+    width: 310px;
+    height: 294px;
+    border-radius: 50%;
+    background-color: #E5E7F0;
+    
+}
+
+.right{
+    position: absolute;
+    left:calc(984px - 18px);
+    top:calc(68px - 216px);
+}
+
+.left{
+    position: absolute;
+    right:calc(984px - 18px);
+    bottom:calc(68px - 216px);
+}
+
+

@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.row{
+    background-color: #FED049;
+    width: 1000px;
+    font-size: 0px;  
+}
+
+.col1{
+    text-indent: 15px;
+    margin: 15px 15px;
+    padding: 20px;
+    color: aliceblue;
+    background-color: #007580;
+    font-size: 18px;
+    width: calc(25% - 30px);
+    display: inline-block;
+    vertical-align: middle;
+
+}
+.col{
+    color: aliceblue;
+    text-indent: 15px;
+    vertical-align: middle;
+    margin: 15px 15px;
+    padding: 20px;
+    background-color: #282846;
+    font-size: 18px;
+    width: calc(25% - 30px);
+    display: inline-block;
+}

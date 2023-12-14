@@ -1,0 +1,46 @@
+.slider{
+    background-color: aqua;
+    height: 250px;
+    width: auto;
+    position: relative;
+}
+.content{
+    height: 100px;
+    top: calc(50% - 50px);
+    position: absolute;
+    margin-left: 20px;     
+}
+
+h1{
+    font-size: small;
+}
+
+.dot1 {
+    left: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+    background: #456BD9;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+  }
+
+  .dot2 {
+    left: 50%;
+    
+    background: #456BD9;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+  }
+  .dotactive{
+    
+    background: #b6d945;
+    border-radius: 50%;
+    height: 1em;
+    width: 1em;
+    position: absolute;
+    
+  }

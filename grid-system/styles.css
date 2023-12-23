@@ -1,0 +1,64 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding-top: 20px;
+}
+
+.container {
+  max-width: 500px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  margin: 0 15px;
+}
+
+.item {
+  background-color: bisque;
+  text-align: center;
+  padding: 30px 20px;
+  border: 1px solid fuchsia;
+}
+
+#section1 .col {
+  width: calc(25% - 30px);
+}
+
+#section2 .left {
+  width: calc(100% / 3 * 2 - 30px);
+}
+
+#section2 .right {
+  width: calc(100% / 3 - 30px);
+}
+
+#section3 .left {
+  width: calc(100% / 3 * 2 - 30px);
+}
+
+#section3 .left-inside {
+  width: calc(100% / 2 - 30px);
+}
+
+#section3 .right {
+  width: calc(100% / 3 - 30px);
+}
+
+#section4 .col {
+  width: calc(100% / 3 - 30px);
+}
+
+#section5 .col {
+  width: calc(50% - 30px);
+}

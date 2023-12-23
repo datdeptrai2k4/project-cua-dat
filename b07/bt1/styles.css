@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul{
+    list-style: none;
+   
+}
+
+.table{
+    border: 1px solid ;
+    width: 60%;
+    height:80% ;
+    
+}
+.row{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+}
+
+.menu-item{
+    background-color:aqua;
+    width: calc(100% /4);
+    text-align: center;
+    border: 1px solid ;
+}
+
+
+
+.special-left{
+    width: calc(100% * 2/3);
+    text-align: center;
+    background-color: aquamarine;
+    border: 1px solid ;
+}
+
+.special-right{
+    width: calc(100% /3);
+    text-align: center;
+    background-color: aquamarine;
+    border: 1px solid ;
+}
+
+
+
+.news-left{
+    width:calc(100% * 2/3);
+    display: flex;
+    
+   
+}
+
+.infor{
+    width: calc(100% /2);
+    text-align: center;
+    border: 1px solid;
+    
+    
+    background-color: beige;
+   
+
+}
+
+.news-right{
+    text-align: center;
+    width:calc(100% /3);
+    border: 1px solid;
+    background-color: beige;
+    
+}
+
+
+
+.top-item{
+    width: calc(100% /3);
+    background-color: azure;
+    border: 1px solid;
+}
+
+.beauty-news{
+    text-align: center;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.beauty-item{
+    width: calc(100% /2);
+    border: 1px solid;
+    background-color: blanchedalmond ;
+}
+
+.trending{
+    text-align: center;
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.trending-item{
+    width: calc(100% /2);
+    border: 1px solid;
+    background-color: blanchedalmond ;
+}
+

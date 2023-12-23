@@ -1,0 +1,140 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color:#1A2036 ;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper{
+  width: 975px;
+  background-color: #252B42;
+  font-family: 'Merriweather';
+  display: flex;
+  justify-content: space-between;
+  border-radius: 25px;
+}
+.left{
+  width: 15%;
+  display: flex;
+  justify-content: center;
+  margin: 35px 0;
+}
+.taskbar{
+  width: 50%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #1A2036;
+  border-radius: 20px;
+}
+.item{
+  color: #7F89A9;
+  padding: 15px;
+}
+.checked{
+  background-color: #242B42;
+  border-radius: 10px;
+}
+.right{
+  width: 85%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-main{
+  width: 90%;
+}
+span{
+  margin: 10px;
+}
+.title-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px 0 44px 0;
+}
+.title{
+  color: #B1B9D8;
+  font-weight: 700;
+  font-size: 26px;
+}
+.menu{
+  font-size: 0;
+}
+.fill1{
+  border: 2px solid #1A2036;
+  background-color: #1A2036;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: inline-block;
+  font-size: 15px;
+}
+.fill2{
+  border: 2px solid #1A2036;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: inline-block;
+  font-size: 15px;
+}
+.form{
+  display: flex;
+  flex-flow: row wrap;
+}
+.avatar{
+  position: relative;
+  width: 23%;
+  margin: 0 7px;
+  background-color: #2E3650;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.info{
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ margin: 40px;
+}
+.style{
+  width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  color: #808FBE;
+  background-color: #242B42;
+}
+p{
+  margin-top: 14px;
+  font-size: 14px;
+  font-family: 'IBM Plex Sans';
+  color: #8795C5;
+}
+.image{
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.names{
+  color: #B1B9D8;
+}
+.cricle{
+  background-color: purple;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
 *,
 *::before,
 *::after {
@@ -6,15 +8,143 @@
   box-sizing: border-box;
 }
 
-.table{
-    background-color: #252B42;
-    margin: 269px 313px;
+body{
+    background-color:  #1A2036;
 }
 
+
+
+.container{
+    width: 975px;
+    background-color: #252B42;
+    margin:269px 313px;
+    display: flex;
+    align-items: center;
+    border-radius: 25px;
+}
+
+
+
 .menu{
+    display: flex;
+    flex-direction: column;
     background-color: #1A2036;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 35px 35px;
+    padding: 158px 0px;
 }
 
 .menu-item{
-    color: white;
+    color: #7F89A9;
+    padding: 15px;
+    width: 58px;
+    height: 58px;
+    text-align: center;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-bottom: 79px;
+}
+
+
+.item{
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #B1B9D8;
+}
+
+.item{
+    padding: 40px 50px ;
+    background-color: #1A2036;
+ 
+}
+
+.item-create{
+    padding: 60px 58px;
+}
+
+.radius{
+    width: 56px;
+  height: 56px;
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+  color: #808FBE;
+  background-color: #242B42;
+}
+
+.thumb{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.member{
+    margin-top: 5px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.name{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+
+.content,
+.control{
+
+    width: 100%;
+}
+
+
+
+.back-arrow{
+    font-family: 'Merriweather';
+    font-weight: 700;
+    font-size: 26px;
+    color: #B1B9D8;
+    text-decoration: none;
+}
+
+.button{
+    display: flex;
+    color: #7F89A9;
+    margin-right: 60px;
+   
+}
+
+.fa-table-cells-large{
+    background-color: #1A2036;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.fa-bars-progress{
+    background-color: #242B42;
+    border: 2px solid #1A2036;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
 }

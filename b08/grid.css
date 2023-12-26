@@ -326,7 +326,8 @@ section.hero-post .row{
 }
 
 
-.beauty{
+.news-beauty{
+  display: flex;
   background-color: #FFFFFF;
  border: 2px #2D3748 ;
   margin-bottom: 24px;
@@ -344,6 +345,57 @@ section.hero-post .row{
   width: 100%;
 }
 
+.trending-row{
+  padding: 0px 48px;
+}
+
+
+
+.trending-thumb{
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-fit: cover;
+}
+
+.left{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.news-trending{
+  width: 100%;
+  display: flex;
+  background-color: #fff ;
+  align-items: center;
+
+}
+
+
+.trending-content{
+  padding-left: 25px;
+  
+}
+.trending-title2{
+ width: 100%;
+ font-family: 'Hind';
+font-size: 22px;
+font-weight: 700;
+line-height: 29px;
+color: #2D3748;
+
+    
+}
+
+.trending-text{
+  font-family: 'Hind';
+font-size: 18px;
+font-weight: 400;
+line-height: 28px;
+color: #718096;
+
+}
 
 
 

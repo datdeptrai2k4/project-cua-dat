@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box{ 
+    max-width: 1200px;
+    background-color:#FFFFFF ;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: beige; 
+}
+
+.menu{
+    display: flex;
+}
+
+.font-item{
+    display: flex;
+    
+}
+
+.color-list{
+    display: flex;
+    
+}
+
+.color-box{
+    padding: 20px;
+}
+
+#color1{
+    background-color: red;
+}
+
+#color2{
+    background-color: white;
+}
+
+#color3{
+    background-color: blue;
+}
+
+#color4{
+    background-color: yellow;
+}
+
+#color5{
+    background-color: orange;
+}
+
+.text{
+    padding: 20px;
+    background-color: aqua;
+    font-size: 24px;
+    text-align: left;
+}

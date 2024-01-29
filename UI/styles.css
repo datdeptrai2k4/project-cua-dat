@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+  }
+  
+  .user-infor {
+    display: flex;
+    align-items: center;
+    padding: 0px 25px 25px 25px;
+  }
+  
+  .data {
+    flex-direction: column;
+  
+  }

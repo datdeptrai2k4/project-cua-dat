@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <div class="header-box">
-            <div class="header-left">
-                <div class="header-menu">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
-                <div class="user-infor">
-                    <img src="./img/a1.jpg" alt="" class="avatar">
-                    <div class="data">
-                        <p class="data-name">Isabella ava</p>
-                        <div class="data-time">
-                            <p class="data-date">July 13, 2020 . </p>
-                            <p class="time"> <i class="fa-regular fa-clock"></i> 1 min</p>
-                        </div>
-                    </div>
-                </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="flex">
+      <div class="flex header-child left">
+        <i class="fa-solid fa-bars hammen"></i>
+        <img src="./images/user-avatar.png" alt="" class="avatar" />
+        <!-- <div class="data">
+            <p class="data-name">Isabella ava</p>
+            <div class="data-time">
+              <p class="data-date">July 13, 2020 .</p>
+              <p class="time"><i class="fa-regular fa-clock"></i> 1 min</p>
             </div>
-            <div class="header-right">
-                <div class="control">
-                    <select id="control">
-                        <option value=" các sản phẩm đã đăng ký nhận thông báo"> các sản phẩm đã đăng ký nhận thông báo</option>
-                        <option value=" các mức thanh toán"> các mức thanh toán</option>
-                        <option value="các thông báo">các thông báo</option>
-                    </select>
-                </div>
-            </div>
+          </div> -->
+      </div>
+      <div class="flex header-child right">
+        <div class="control flex">
+          <!-- <select id="control">
+            <option value=" các sản phẩm đã đăng ký nhận thông báo">
+              các sản phẩm đã đăng ký nhận thông báo
+            </option>
+            <option value=" các mức thanh toán">các mức thanh toán</option>
+            <option value="các thông báo">các thông báo</option>
+          </select> -->
+          <a href="build/product.html" class="link flex">Products</a>
+          <a href="build/plans.html" class="link flex">Plans</a>
+          <a href="" class="link flex">
+            <img src="./images/notification-bell.png" alt=""
+          /></a>
+          <img src="./images/user-avatar.png" alt="" class="avatar" />
         </div>
+      </div>
     </header>
     <script src="./web.js"></script>
-</body>
+  </body>
 </html>

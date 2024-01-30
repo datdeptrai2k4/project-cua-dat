@@ -1,0 +1,74 @@
+/* div {
+  width: 100px;
+  height: 100px;
+  background-color: papayawhip;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&family=Poppins&family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  height: 100%;
+}
+
+img {
+  display: block;
+  height: 50%;
+  width: auto;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: "Poppins", "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+  height: 7%;
+  padding-inline: 2rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  flex-direction: row;
+  gap: 50%;
+}
+
+a {
+  height: 100%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.hammen {
+  font-size: 1.25rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.header-child {
+  width: 100%;
+  justify-content: center;
+}
+
+.control {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left {
+  width: 20%;
+  justify-content: space-between;
+}

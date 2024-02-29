@@ -1,0 +1,16 @@
+.hello{
+font-size: 40px;
+}
+$colorRed: red;
+$colorBlue:blue;
+
+$font-array:(
+red: $colorRed,
+gg:$colorBlue
+);
+
+@each $key,$value in $font-array{
+    .btn-#{$key}{
+        background-color: $value    ;
+    }
+}

@@ -1,0 +1,21 @@
+.container {
+  width: 20rem;
+  height: 20rem;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.list-container li {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.delete-button {
+  cursor: pointer;
+  width: 2.5rem;
+}

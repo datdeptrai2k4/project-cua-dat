@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="title">Todo App</h1>
+    <div class="main">
+      <div id="searchArea">
+        <h2>Search</h2>
+        <form id="searchForm">
+          <input type="text" id="inputSearch" />
+          <button type="button" id="btnSearch">Search</button>
+          <button type="button" id="btnClear">Clear</button>
+        </form>
+        <div class="filterArena">
+          <h2>Filter</h2>
+          <div class="filter-options">
+            <label for="selectStatus">Status:</label>
+            <select id="selectStatus">
+              <option value="all">All</option>
+              <option value="completed">Completed</option>
+              <option value="uncompleted">Uncompleted</option>
+            </select>
+            <label for="selectLevel">Level:</label>
+            <select id="selectLevel">
+              <option value="all">All</option>
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="softArena">
+          <h2>Soft</h2>
+          <button class="btnSoft" id="btnDefault">Default</button>
+          <button class="btnSoft" id="btnUp">Tăng dần theo tên</button>
+          <button class="btnSoft" id="btnDown">Giảm dần theo tên</button>
+          <button class="btnSoft" id="btnUpLevel">Tăng dần theo Lv</button>
+          <button class="btnSoft" id="btnDownLevel">Giảm dần theo Lv</button>
+        </div>
+      </div>
+
+      <form action="" id="todoForm">
+        <label for="inputName">Add Item</label>
+        <input type="text" id="inputName" />
+        <button type="button" id="btnSubmit">Submit</button>
+      </form>
+      <div>
+        <label for="">Items list</label>
+        <ul id="todoList">
+          <li class="todoItem">
+            <span>Reading book</span>
+            <div class="action">
+              <i class="fa-solid fa-pencil btnAction btnEdit"></i>
+              <i class="fa-solid fa-trash-can btnAction btnDelete"></i>
+            </div>
+          </li>
+          <li class="todoItem">
+            <span>Coding</span>
+            <div class="action">
+              <i class="fa-solid fa-pencil btnAction btnEdit"></i>
+              <i class="fa-solid fa-trash-can btnAction btnDelete"></i>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 992px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.title {
+  background-color: white;
+  text-align: center;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.main {
+  
+  gap: 20px;
+}
+
+.main > * {
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+#inputName {
+  width: 100%;
+  border: 1px solid aquamarine;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+#inputName:focus {
+  outline: none;
+}
+
+#btnSubmit {
+  padding: 8px 15px;
+  background: aquamarine;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.todoItem {
+  background: white;
+  border: 1px solid #585858;
+  border-radius: 5px;
+  margin-bottom: 1px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnAction {
+  margin: 0 2px;
+  cursor: pointer;
+}
+
+#searchForm {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#inputSearch {
+  flex: 1;
+  margin-right: 5px;
+  border: 1px solid aquamarine;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+#btnSearch,
+#btnClear {
+  padding: 8px 15px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#btnSearch {
+  background: aquamarine;
+  margin-right: 5px;
+}
+
+#btnClear {
+  background: gold;
+}
+.highlight{
+  background: gold;
+}
+#searchArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-options {
+  display: flex;
+}
+.filter-options label, .filter-options select {
+  width: 30%; 
+}
+
+.filter-options select {
+  font-size: 16px; 
+}
+
+.blue{
+  background-color: blue;
+}
+
+.softArena{
+  margin: 10px 0px;
+  display: flex;
+}
+.btnSoft{
+  background-color: beige;
+  padding: 5px 15px;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}

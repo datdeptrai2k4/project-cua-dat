@@ -1,0 +1,30 @@
+.container {
+  width: 20rem;
+  height: auto;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.list-container li {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-container button {
+  flex: 1;
+  height: 100%;
+}
+
+.button-container {
+  min-width: 8rem;
+  height: auto;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: space-between;
+}

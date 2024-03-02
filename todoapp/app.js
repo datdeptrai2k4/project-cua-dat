@@ -128,17 +128,20 @@ function renderList(todoList) {
   for (let i = 0; i < todoList.length; i++) {
     let item = todoList[i];
     let displayName = item.name;
-
+    let levelName;
     let levelColor;
     switch (item.level) {
       case 1:
         levelColor = 'green';
+        levelName='Dễ';
         break;
       case 2:
         levelColor = 'yellow';
+        levelName='Vừa';
         break;
       case 3:
         levelColor = 'red';
+        levelName='Khó';
         break;
       default:
         levelColor = 'black';
@@ -149,7 +152,7 @@ function renderList(todoList) {
     }
     let levelHTML='';
     levelHTML += /* html */`
-      <span style="color: ${levelColor};">${item.level}</span>`;
+      <span style="color: ${levelColor};">${levelName}</span>`;
 
     html += /* html */ `
     <li class="todoItem">

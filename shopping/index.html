@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <nav class="navbar bg-black border-bottom border-body" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand">ZendVN Shop</a>
+      <div class="dropdown me-auto">
+        <button
+          class="btn btn-primary btn-sm dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="badge text-bg-danger" id="cartCount">0</span>
+        </button>
+        <ul class="dropdown-menu" id="cartList">
+          <li><button class="dropdown-item" type="button">PS5 (2)</button></li>
+          <li><button class="dropdown-item" type="button">Sony Vega (1)</button></li>
+        </ul>
+      </div>
+      <form class="d-flex" role="search">
+        <input class="form-control" id="searchInput"type="search" placeholder="Tìm kiếm...." aria-label="Search" />
+      </form>
+    </div>
+  </nav>
+  <section class="bg-dark text-white py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 mb-3">
+          <h4>Danh mục</h4>
+          <div id="filterCategory">
+            <div class="form-check">
+              <input class="form-check-input checkbox-category"  type="checkbox" value="cameras" id="chkCameras" />
+              <label class="form-check-label" for="chkCameras"> Cameras </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input checkbox-category"  type="checkbox" value="smartphones" id="chkSmartphones" />
+              <label class="form-check-label" for="chkSmartphones"> Smartphones </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input checkbox-category"  type="checkbox" value="games" id="chkGames" />
+              <label class="form-check-label" for="chkGames"> Games </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input checkbox-category"  type="checkbox" value="televisions" id="chkTelevisions" />
+              <label class="form-check-label" for="chkTelevisions"> Televisions </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9">
+          <div class="row" id="productList">
+            <div class="col-md-4 col-6 mb-3">
+              <div class="thumb bg-white rounded overflow-hidden">
+                <img src="images/playstation_5.png" class="img-fluid" alt="..." />
+              </div>
+              <div class="info mt-2">
+                <h5>Sony Playstation 5</h5>
+                <p>$499.99</p>
+                <button type="button" class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4 col-6 mb-3">
+              <div class="thumb bg-white rounded overflow-hidden">
+                <img src="images/samsung_galaxy.png" class="img-fluid" alt="..." />
+              </div>
+              <div class="info mt-2">
+                <h5>Samsung Galaxy</h5>
+                <p>$399.99</p>
+                <button type="button" class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+            <div class="col-md-4 col-6 mb-3">
+              <div class="thumb bg-white rounded overflow-hidden">
+                <img src="images/cannon_eos_camera.png" class="img-fluid" alt="..." />
+              </div>
+              <div class="info mt-2">
+                <h5>Cannon EOS Camera</h5>
+                <p>$749.99</p>
+                <button type="button" class="btn btn-primary">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

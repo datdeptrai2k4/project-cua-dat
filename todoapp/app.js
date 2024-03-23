@@ -45,6 +45,8 @@ const elBtnDownLevel = document.getElementById('btnDownLevel');
 const elBtnDefault = document.getElementById('btnDefault');
 const elBtnSearch = document.getElementById('btnSearch');
 const elBtnClear = document.getElementById('btnClear');
+const elSelectLevel = document.getElementById('selectLevel');
+const elSelectStatus = document.getElementById('selectStatus');
 let idxEdit = null;
 
 renderList(NEW_TODO_LIST);
@@ -73,7 +75,7 @@ elBtnDefault.addEventListener('click', function () {
   renderList(NEW_TODO_LIST);
 });
 elBtnClear.addEventListener('click', function () {
-  elInputSearch.value='';
+  elInputSearch.value = '';
 });
 
 
@@ -86,8 +88,8 @@ elBtnSubmit.addEventListener('click', function () {
       const newItem = {
         id: self.crypto.randomUUID(),
         name: itemName,
-        completed: false, 
-        level: 1, 
+        completed: false,
+        level: 1,
       };
       NEW_TODO_LIST.push(newItem);
     }
@@ -121,6 +123,39 @@ function editTodo(idx) {
   idxEdit = idx;
 }
 
+//filter
+elSelectLevel.addEventListener('change', function () {
+  const selectedLevel = elSelectLevel.value;
+  let filteredList;
+  if (selectedLevel === 'all') {
+    filteredList = NEW_TODO_LIST;
+  } else {
+    filteredList = NEW_TODO_LIST.filter(function (item) {
+      return item.level === parseInt(selectedLevel);
+    });
+  }
+
+  renderList(filteredList);
+});
+
+elSelectStatus.addEventListener('change', function () {
+  const selectedStatus = elSelectStatus.value;
+  let filteredList;
+  if (selectedStatus === 'all') {
+    filteredList = NEW_TODO_LIST;
+  } else {
+    filteredList = NEW_TODO_LIST.filter(function (item) {
+      if (selectedStatus === 'completed') {
+        return item.completed === true;
+      } else {
+        return item.completed === false;
+      }
+    });
+  }
+
+  renderList(filteredList);
+});
+
 function renderList(todoList) {
   let html = '';
   const searchItem = elInputSearch.value.trim().toLowerCase();
@@ -133,31 +168,35 @@ function renderList(todoList) {
     switch (item.level) {
       case 1:
         levelColor = 'green';
-        levelName='Dễ';
+        levelName = 'Dễ';
         break;
       case 2:
         levelColor = 'yellow';
-        levelName='Vừa';
+        levelName = 'Vừa';
         break;
       case 3:
         levelColor = 'red';
-        levelName='Khó';
+        levelName = 'Khó';
         break;
       default:
         levelColor = 'black';
     }
 
+    if (item.completed) {
+      displayName = /* html */`<span class="completed">${displayName}</span>`;
+    }
+
     if (displayName.toLowerCase().includes(searchItem)) {
       displayName = displayName.replace(new RegExp(searchItem, 'gi'), match => `<span class="highlight">${match}</span>`);
     }
-    let levelHTML='';
+    let levelHTML = '';
     levelHTML += /* html */`
       <span style="color: ${levelColor};">${levelName}</span>`;
 
     html += /* html */ `
     <li class="todoItem">
       <span>${displayName}</span>
-      <span>||Completed: ${item.completed}|| Level: ${levelHTML}</span>
+      <span>|| Level: ${levelHTML}</span>
       <div class="action">
         <i class="fa-solid fa-pencil btnAction btnEdit" onclick="editTodo(${i})"></i>
         <i class="fa-solid fa-trash-can btnAction btnDelete" onclick="deleteTodo(${i})"></i>
@@ -167,6 +206,8 @@ function renderList(todoList) {
 
   elTodoList.innerHTML = html;
 }
+
+
 
 
 

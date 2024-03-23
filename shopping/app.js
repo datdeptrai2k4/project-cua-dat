@@ -1,95 +1,18 @@
-const products = [
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Sony Playstation 5',
-    url: 'images/playstation_5.png',
-    type: 'games',
-    price: 499.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Samsung Galaxy',
-    url: 'images/samsung_galaxy.png',
-    type: 'smartphones',
-    price: 399.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Cannon EOS Camera',
-    url: 'images/cannon_eos_camera.png',
-    type: 'cameras',
-    price: 749.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Sony A7 Camera',
-    url: 'images/sony_a7_camera.png',
-    type: 'cameras',
-    price: 1999.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'LG TV',
-    url: 'images/lg_tv.png',
-    type: 'televisions',
-    price: 799.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Nintendo Switch',
-    url: 'images/nintendo_switch.png',
-    type: 'games',
-    price: 299.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Xbox Series X',
-    url: 'images/xbox_series_x.png',
-    type: 'games',
-    price: 499.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Samsung TV',
-    url: 'images/samsung_tv.png',
-    type: 'televisions',
-    price: 1099.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Google Pixel',
-    url: 'images/google_pixel.png',
-    type: 'smartphones',
-    price: 499.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Sony ZV1F Camera',
-    url: 'images/sony_zv1f_camera.png',
-    type: 'cameras',
-    price: 799.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'Toshiba TV',
-    url: 'images/toshiba_tv.png',
-    type: 'televisions',
-    price: 499.99,
-  },
-  {
-    id: self.crypto.randomUUID(),
-    name: 'iPhone 14',
-    url: 'images/iphone_14.png',
-    type: 'smartphones',
-    price: 999.99,
-  },
-];
-const carts = [];
+let products = [];
+let carts = [];
 const elProductList = document.getElementById('productList');
 const elBtnSearchInput = document.getElementById('searchInput');
 const elBtnFilterCategory = document.getElementById('filterCategory');
 const elCartCount = document.getElementById('cartCount');
 const elcartList = document.getElementById('cartList');
+//modal
+const elInputProductImage = document.getElementById('productImage');
+const elInputProductName = document.getElementById('productName');
+const elInputProductPrice = document.getElementById('productPrice');
+const elInputProductType = document.getElementById('productType');
+const elBtnSubmit = document.getElementById('btnSubmit');
+const elBtnSaveProduct = document.getElementById('btnSaveProduct');
+const productFormModal = new bootstrap.Modal('#productFormModal');
 
 elBtnSearchInput.addEventListener('input', function () {
   const searchItem = elBtnSearchInput.value.trim().toLowerCase();
@@ -97,8 +20,75 @@ elBtnSearchInput.addEventListener('input', function () {
     return item.name.toLowerCase().includes(searchItem);
   });
   renderList(filteredList);
-})
-//filtera
+});
+
+elBtnSaveProduct.addEventListener('click', function () {
+  const productId = document.getElementById('productId').value;
+  if (productId) {
+    updateProduct(productId);
+  } else {
+    addProduct();
+  }
+
+  productFormModal.hide();
+});
+
+function openUpdateModal(productId) {
+  productFormModal.show();
+  const product = products.find(item => item.id === productId);
+  if (product) {
+    elInputProductName.value = product.name;
+    elInputProductImage.value = product.url;
+    elInputProductPrice.value = product.price;
+    elInputProductType.value = product.type;
+    document.getElementById('productId').value = productId;
+    
+  }
+}
+function deleteProduct(productId) {
+  const confirmDelete = confirm("Bạn có chắc muốn xóa sản phẩm này?");
+  if (confirmDelete) {
+    products = products.filter(item => item.id !== productId);
+    saveProductsToLocalStorage();
+    renderList(products);
+  }
+}
+function addProduct() {
+  const newItem = {
+    id: crypto.randomUUID(),
+    name: elInputProductName.value,
+    url: elInputProductImage.value,
+    price: elInputProductPrice.value,
+    type: elInputProductType.value,
+  };
+  products.push(newItem);
+  saveProductsToLocalStorage();
+  renderList(products);
+}
+
+function updateProduct(productId) {
+  const productIndex = products.findIndex(item => item.id === productId);
+  if (productIndex) {
+    products[productIndex].name = elInputProductName.value;
+    products[productIndex].url = elInputProductImage.value;
+    products[productIndex].price = elInputProductPrice.value;
+    products[productIndex].type = elInputProductType.value;
+    saveProductsToLocalStorage();
+    renderList(products);
+  }
+}
+
+function saveProductsToLocalStorage() {
+  localStorage.setItem('products', JSON.stringify(products));
+}
+
+function loadProductsFromLocalStorage() {
+  const storedProducts = localStorage.getItem('products');
+  if (storedProducts) {
+    products = JSON.parse(storedProducts);
+  }
+}
+
 elBtnFilterCategory.addEventListener('change', function () {
   const arrElCheckbox = document.getElementsByClassName('checkbox-category');
   const selectedValue = [];
@@ -107,34 +97,36 @@ elBtnFilterCategory.addEventListener('change', function () {
       selectedValue.push(arrElCheckbox[i].value);
     }
   }
-  if(selectedValue.length>0){
+  if (selectedValue.length > 0) {
     const filteredList = products.filter((item) => {
       return selectedValue.includes(item.type);
     })
     renderList(filteredList);
-  }else{
+  } else {
     renderList(products);
   }
-})
+});
 
-
+loadProductsFromLocalStorage();
 renderList(products);
+
 function renderList(product) {
   let html = "";
   for (let i = 0; i < product.length; i++) {
     let item = product[i];
-    html += /*html*/`
-    <div class="col-md-4 col-6 mb-3">
-      <div class="thumb bg-white rounded overflow-hidden">
-      <img src="${item.url}" alt="..." class="img-fluid"/>
-    </div>
-    <div class="info mt-2">
-      <h5>${item.name}</h5>
-      <p>${item.price}</p>
-      <button type="button" class="btn btn-primary"onclick="addToCart('${item.id}')" >Add to cart</button>
-    </div>
-    </div>
-    `
+    html += /*html*/ `
+      <div class="col-md-4 col-6 mb-3">
+        <div class="thumb bg-white rounded overflow-hidden">
+          <img src="${item.url}" alt="..." class="img-fluid"/>
+        </div>
+        <div class="info mt-2">
+          <h5>${item.name}</h5>
+          <p>${item.price}</p>
+          <button type="button" class="btn btn-primary" onclick="addToCart('${item.id}')" >Add to cart</button>
+          <button type="button" class="btn btn-sm btn-success" onclick="openUpdateModal('${item.id}')">Cập nhật</button>
+          <button type="button" class="btn btn-sm btn-danger" onclick="deleteProduct('${item.id}')">Xóa</button>
+        </div>
+      </div>`;
   }
   elProductList.innerHTML = html;
 }
@@ -162,9 +154,7 @@ function renderCartList() {
     let cartItem = carts[i];
     let product = products.find(item => item.id === cartItem.productId);
     if (product) {
-      html += /*html*/`
-        <li><button class="dropdown-item" type="button">${product.name} (${cartItem.quantity})</button></li>
-      `;
+      html += /*html*/`<li><button class="dropdown-item" type="button">${product.name} (${cartItem.quantity})</button></li>`;
     }
   }
   elcartList.innerHTML = html;
